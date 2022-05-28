@@ -144,37 +144,3 @@ button{
   text-decoration: line-through;
   color: #888;
 }
-
-/* 
-
-li {
-  overflow: hidden;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-li > * {
-  vertical-align: middle;
-}
-
-li > input[type="checkbox"] {
-  margin: 0 10px;
-}
-
-ul li input[type=text] {
-  display: none
-}
-
-ul li.edit input[type=text] {
-  display: inline-block;
-  width: 224px
-}
-
-ul li.edit label {
-  display: none;
-} 
-*/
-
