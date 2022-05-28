@@ -54,7 +54,7 @@ function bindTaskEvents(taskContainer, checkBoxEventHandler){
   console.log('bind list item events');
   const checkBox = taskContainer.querySelector('.task__checkbox');
   const editButton = taskContainer.querySelector('.button-edit');
-  const deleteButton = taskContainer .querySelector('.button-delete');
+  const deleteButton = taskContainer.querySelector('.button-delete');
 
   checkBox.onchange = checkBoxEventHandler;
   editButton.onclick = editTask;
@@ -63,24 +63,32 @@ function bindTaskEvents(taskContainer, checkBoxEventHandler){
 
 function editTask(){
   console.log('Edit Task...');
-  console.log('Change "edit" to "save"');
 
   const container = this.closest('.task__item');
   if (container) {
+    const checkBox = container.querySelector('.task__checkbox');
     const label = container.querySelector('.task__text');
     const input = container.querySelector('.task__input-text');
     const editBtn = container.querySelector('.button-edit');
     const isEditable = container.classList.contains('edit');
 
-    if(isEditable){
-      label.innerText = input.value;
-      editBtn.innerText = 'Edit';
-    }else{
+    if (isEditable){
+      if (input.value.trim()) {
+        console.log('save');
+        label.innerText = input.value;
+        editBtn.innerText = 'Edit';
+        checkBox.disabled = false;
+        container.classList.toggle('edit');
+      } else {
+        console.log('You can\'t save empty task');
+      }
+    } else {
+      console.log('edit');
       input.value = label.innerText;
       editBtn.innerText = 'Save';
+      checkBox.disabled = true;
+      container.classList.toggle('edit');
     }
-
-    container.classList.toggle('edit');
   }
 };
 
@@ -124,7 +132,3 @@ function setTaskInompleted(){
     bindTaskEvents(task,setTaskCompleted);
   }
 }
-
-// Issues with usability don't get seen until they are in front of a human tester.
-// prevent creation of empty tasks.
-// Change edit to save when you are in edit mode.
