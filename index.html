@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="style.css" media="screen">
   </head>
 
-  <body>
+  <body class="body">
     <div class="container">
-      <div class="intro">
-        <img src="./eisenhower-matrix.jpg" alt="Eisenhower matrix image">
-        <a class="intro__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-      </div>
+      <header class="header">
+        <img class="header__img" src="./eisenhower-matrix.jpg" alt="Eisenhower matrix image">
+        <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      </header>
 
-      <div class="app">
-        <div class="app__section section__new">
+      <main class="app">
+        <section class="app__section section__new">
           <h3 class="section__title">Add Item</h3>
           <div class="task-row-wrapper task__item">
             <input class="input__text" id="new-task">
             <button class="button">Add</button>
           </div>
-        </div>
+        </section>
 
-        <div class="app__section section__todo">
+        <section class="app__section section__todo">
           <h3 class="section__title">Todo</h3>
           <ul class="tasks__list">
             <li class="task__item">
@@ -40,10 +40,10 @@
               <button class="button button-delete"></button>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="app__section section__completed">
-          <div class="section__title">Completed</div>
+        <section class="app__section section__completed">
+          <h3 class="section__title">Completed</h3>
           <ul class="tasks__list" id="completed-tasks">
             <li class="task__item">
               <input type="checkbox" class="task__checkbox" checked>
@@ -53,8 +53,8 @@
               <button class="button button-delete"></button>
             </li>
           </ul>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
 
     <script src="app.js"></script>

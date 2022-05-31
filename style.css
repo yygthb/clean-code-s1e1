@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -41,28 +41,28 @@ button {
   color: #3a3a3a;
 }
 
-/* section Intro */
-.intro {
+/* header */
+.header {
   text-align: right;
 }
 
-.intro img {
+.header__img {
   width: 100%;
 }
 
-.intro .intro__link {
+.header__link {
   font-family: cursive, fantasy;
 }
 
 @media (max-width: 768px) {
 
-  .intro {
+  .header {
     text-align: center;
   }
 
 }
 
-/* section App */
+/* main */
 .app__section {
   margin: 30px 0;
 }
