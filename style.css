@@ -23,7 +23,7 @@ li {
 }
 
 input,
-button{
+button {
   outline: none;
 }
 
@@ -38,7 +38,7 @@ button{
 }
 
 .button:hover {
-  color: #3a3A3a;
+  color: #3a3a3a;
 }
 
 /* section Intro */
@@ -54,7 +54,7 @@ button{
   font-family: cursive, fantasy;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
   .intro {
     text-align: center;
@@ -105,13 +105,13 @@ button{
   height: 21px;
   padding: 0 9px;
   margin: 0;
-  border: 1px solid #dDd;
+  border: 1px solid #ddd;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   font-size: 18px;
   line-height: 18px;
   color: #888;
-  background: #FFF;
+  background: #fff;
 }
 
 .input__text:focus {
